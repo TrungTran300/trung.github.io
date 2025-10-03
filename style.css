@@ -1,0 +1,32 @@
+.menu-custom:hover{
+    color: rgb(199, 87, 46) !important;
+    transition: 0.5s;
+}
+
+
+
+/* Product cards */
+.product-card .card-img-top{
+    height: 180px;
+    object-fit: cover;
+}
+.product-price{font-size: 1rem}
+
+@media (max-width: 768px){
+    .product-card .card-img-top{height:150px}
+}
+
+.intro-section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.intro-card .card-img-top{height:100px; object-fit:cover}
+.intro-card .card-body{font-size:0.85rem}
+
+/* Footer styles */
+.site-footer a{text-decoration:none}
+.site-footer .btn-outline-light{border-color:rgba(224, 143, 37)}
+
+/* Checkout modal tweaks */
+.modal .form-label{font-size:0.95rem}
+.modal .form-control, .modal textarea{font-size:0.95rem}

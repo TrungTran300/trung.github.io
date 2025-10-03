@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SẢN PHẨM</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Project styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold text-dark" href="#">TRUNGCODE</a>
+
+      <!-- Nút 3 gạch -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-dark menu-custom" href="index.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning menu-custom" href="product.html">Sản phẩm</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-dark menu-custom" href="#">Bán chạy</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link text-dark menu-custom" href="contact.html">Thông tin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Products section: left = product menu, right = product list -->
+<section id="products" class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left: product menu -->
+      <aside class="col-12 col-md-4 col-lg-3 mb-4">
+        <div class="left-menu">
+          <div class="card-body">
+            <h5 class="card-title">Danh mục sản phẩm</h5>
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action bg-dark active">Tất cả</a>
+              <a href="#" class="list-group-item list-group-item-action">Trà sữa</a>
+              <a href="#" class="list-group-item list-group-item-action">Trà trái cây</a>
+              <a href="#" class="list-group-item list-group-item-action">Sinh tố</a>
+              <a href="#" class="list-group-item list-group-item-action">Đồ uống nóng</a>
+              <a href="#" class="list-group-item list-group-item-action">Khuyến mãi</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right  -->
+      <main class="col-12 col-md-8 col-lg-9">
+        <div class="row g-4">
+          <!--Products 1-->
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          document.querySelectorAll('button').forEach(function(b){
+            if(b.textContent && b.textContent.trim().includes('Đặt')) {
+              b.addEventListener('click', function(e){
+                var modalEl = document.getElementById('checkoutModal');
+                var modal = new bootstrap.Modal(modalEl);
+                modal.show();
+              });
+            }
+          });
+
+          var form = document.getElementById('checkoutForm');
+          if(form) {
+            form.addEventListener('submit', function(ev){
+              ev.preventDefault();
+              var params = new URLSearchParams(new FormData(form)).toString();
+              window.location.href = 'checkout.html?' + params;
+            });
+          }
+        });
+        </script>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/trasuatruyenthong.jpg" class="card-img-top" alt="Trà sữa" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Trà sữa truyền thống</h6>
+                <p class="product-price fw-bold text-danger mb-3">39,000đ</p>
+                <p class="card-text text-muted small">Bảng vị thơm béo, topping trân châu dai ngon.</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/tradaocamxa1.png" class="card-img-top" alt="Trà trái cây" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Trà đào cam sả</h6>
+                <p class="product-price fw-bold text-danger mb-3">45,000đ</p>
+                <p class="card-text text-muted small">Mùi đào tươi mát hòa quyện cùng cam sả.</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/sinhtobo.jpg" class="card-img-top" alt="Sinh tố" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Sinh tố bơ</h6>
+                <p class="product-price fw-bold text-danger mb-3">49,000đ</p>
+                <p class="card-text text-muted small">Sinh tố bơ sánh mịn, ngọt nhẹ tự nhiên.</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/cfsua.jpg" class="card-img-top" alt="Đồ uống nóng" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Cà phê sữa</h6>
+                <p class="product-price fw-bold text-danger mb-3">29,000đ</p>
+                <p class="card-text text-muted small">Cà phê đậm vị, sữa thơm béo.</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/matchalatte.jpg" class="card-img-top" alt="Trà xanh" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Trà xanh matcha</h6>
+                <p class="product-price fw-bold text-danger mb-3">59,000đ</p>
+                <p class="card-text text-muted small">Matcha chuẩn Nhật, vị đắng dịu.</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/suatuoi1.webp" class="card-img-top" alt="Khuyến mãi" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Sữa tươi</h6>
+                <p class="product-price fw-bold text-danger mb-3">12,000đ</p>
+                <p class="card-text text-muted small">Sữa tươi tiệt trùng.</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/tratraicay.png" class="card-img-top" alt="Khuyến mãi" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Trà trái cây</h6>
+                <p class="product-price fw-bold text-danger mb-3">32,000đ</p>
+                <p class="card-text text-muted small">Trà trái cây .</p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 product-card">
+              <img src="images/nuocngot.jpeg" class="card-img-top" alt="Khuyến mãi" />
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Nước ngọt các loại</h6>
+                <p class="product-price fw-bold text-danger mb-3">12,000đ</p>
+                <p class="card-text text-muted small">Sting </p>
+                <div class="mt-auto">
+                  <button class="btn btn-dark w-100">Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+</section>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Checkout modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form id="checkoutForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkoutModalLabel">Thông tin giao hàng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label class="form-label">Họ và tên</label>
+            <input name="name" required class="form-control" />
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Số điện thoại</label>
+            <input name="phone" required class="form-control" />
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Địa chỉ (số, đường)</label>
+            <input name="street" required class="form-control" />
+          </div>
+          <div class="row g-2">
+            <div class="col-6">
+              <label class="form-label">Thành phố</label>
+              <input name="city" required class="form-control" />
+            </div>
+            <div class="col-6">
+              <label class="form-label">Mã bưu chính</label>
+              <input name="postal" class="form-control" />
+            </div>
+          </div>
+          <!-- Size selection -->
+          <div class="mb-2 mt-2">
+            <label class="form-label">Chọn size</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="size" id="sizeLarge" value="Lớn" required>
+                <label class="form-check-label" for="sizeLarge">Lớn</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="size" id="sizeSmall" value="Nhỏ">
+                <label class="form-check-label" for="sizeSmall">Nhỏ</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-2 mt-2">
+            <label class="form-label">Ghi chú</label>
+            <textarea name="note" class="form-control" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="submit" class="btn btn-primary">Tiếp tục thanh toán</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer bg-dark text-light py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-3">
+        <h5 class="fw-bold">TRUNGCODE</h5>
+        <p class="small">Địa chỉ: số 45 Châu Đức TP. Hồ Chí Minh</p>
+        <p class="small">Điện thoại: 0355-223-687</p>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <h6 class="fw-bold">Liên kết</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="text-light">Trang chủ</a></li>
+          <li><a href="product.html" class="text-light">Sản phẩm</a></li>
+          <li><a href="contact.html" class="text-light">Thông tin</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <h6 class="fw-bold">Kết nối</h6>
+        <p class="small">Theo dõi chúng tôi trên mạng xã hội</p>
+        <a class="btn btn-sm btn-outline-light me-1" href="#">Facebook</a>
+        <a class="btn btn-sm btn-outline-light me-1" href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center small">&copy; 2025 TRUNGCODE. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
